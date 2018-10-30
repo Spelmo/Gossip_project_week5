@@ -1,0 +1,22 @@
+
+ <body>
+  <h1 class='ba'>The Gossip Project</h1>
+  <br>
+  <p class='ba'>
+    Welcome <%= @first_name%> !
+  </p>
+
+<div class="cards">
+    <% Gossip.all.each_with_index do |gossip, index| %>
+        <p>
+          <div class="card" style="width: 18rem;">
+          <h5 class="card-title"><%=gossip.author%></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%=gossip.created_at%></h6>
+          <%=gossip.content%>
+          <a href='/goss/<%=index+1%>' class="card-link">Voir le potin</a>
+        </div>
+        </p>
+      <% end %>
+    </div>
+
+</body>

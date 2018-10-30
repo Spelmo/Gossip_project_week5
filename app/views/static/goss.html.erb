@@ -1,0 +1,22 @@
+<body>
+
+<header>
+  <nav><ul class="menu">
+    <li><%= link_to "TEAM", team_path%></li>
+    <li><%= link_to "CONTACT", contact_path%></li>
+  </ul></nav>
+</header>
+
+
+ <h1 class='ba'>The Gossip Project</h1>
+ <br>
+ <p class='ba'>
+
+  Author : <%= Gossip.find(@index).author%>
+  <br>
+  Content: <%= Gossip.find(@index).content%>
+  <br>
+  Date de création :  <%=Gossip.find(@index).created_at%>
+
+ </p>
+</body>
